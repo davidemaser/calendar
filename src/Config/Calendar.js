@@ -35,62 +35,99 @@ const calFomat = {
         }
     },
     months:{
-        en:{
-            jan:{
-                label:'January',
-                days:31,
-                events:{
-                    name:'New Years',
-                    day:1
-                }
+        1:{
+            en:{
+                short:'jan',
+                label:'January'
             },
-            feb:{
-                label:'February',
-                days:28
+            days:31,
+            events:{
+                name:'New Years',
+                day:1
+            }
+        },
+        2:{
+            en:{
+                short:'feb',
+                label:'February'
             },
-            mar:{
-                label:'March',
-                days:31
+            days:28
+        },
+        3:{
+            en:{
+                short:'mar',
+                label:'March'
             },
-            apr:{
-                label:'April',
-                days:30
+            days:31
+        },
+        4:{
+            en:{
+                short:'apr',
+                label:'April'
             },
-            may:{
-                label:'Mai',
-                days:31
+            days:30
+        },
+        5:{
+            en:{
+                short:'may',
+                label:'May'
             },
-            jun:{
-                label:'June',
-                days:30
+            days:31
+        },
+        6:{
+            en:{
+                short:'jun',
+                label:'June'
             },
-            jul:{
-                label:'July',
-                days:31
+            days:30
+        },
+        7:{
+            en:{
+                short:'jul',
+                label:'July'
             },
-            aug:{
-                label:'August',
-                days:31
+            days:31
+        },
+        8:{
+            en:{
+                short:'aug',
+                label:'August'
             },
-            sep:{
-                label:'September',
-                days:30
+            days:31
+        },
+        9:{
+            en:{
+                short:'sep',
+                label:'September'
             },
-            oct:{
-                label:'October',
-                days:31
+            days:30
+        },
+        10:{
+            en:{
+                short:'oct',
+                label:'October'
             },
-            nov:{
-                label:'November',
-                days:30
+            days:31
+        },
+        11:{
+            en:{
+                short:'nov',
+                label:'November'
             },
-            dec:{
-                label:'December',
-                days:30,
-                events:{
-                    name:'Christmas',
-                    day:25
-                }
+            days:30
+        },
+        12:{
+            en:{
+                short:'dec',
+                label:'December'
+            },
+            days:30,
+            events:{
+                name:{
+                    en:'Christmas',
+                    fr:'Noel'
+                },
+                day:25
             }
         }
     },

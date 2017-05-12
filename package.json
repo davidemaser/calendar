@@ -7,7 +7,7 @@
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
-    "grunt": "^1.0.1",
+    "gulp": "^3.9.1",
     "react-http-request": "^1.0.3",
     "react-scripts": "0.9.5"
   },
