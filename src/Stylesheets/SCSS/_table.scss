@@ -1,0 +1,13 @@
+td {
+  padding: 10px;
+  transition: all 0.2s;
+}
+td:hover{
+  background:#e6e6e6;
+  cursor:pointer;
+}
+
+table {
+  border: 1px solid #000;
+  border-radius: 2px;
+}

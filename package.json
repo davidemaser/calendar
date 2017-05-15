@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
     "react-http-request": "^1.0.3",
     "react-scripts": "0.9.5"
   },
