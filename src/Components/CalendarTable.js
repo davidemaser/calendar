@@ -16,9 +16,9 @@ class CalendarTable extends Component{
 
     buildRowView(){
         let rowViewArray = [];
-        for(let r = 0;r<this.state.rows;r++){
+        for(let r = 1;r<this.state.rows+1;r++){
             rowViewArray.push(
-                <CalendarRow key={r} today={this.state.today} initial={r} starts={r === 0 ? this.props.starts : 0}/>
+                <CalendarRow key={r} today={this.state.today} initial={r} starts={r !== 0 ? this.props.starts : 0}/>
             );
         }
 

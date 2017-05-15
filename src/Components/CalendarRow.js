@@ -14,22 +14,22 @@ class CalendarRow extends Component{
         };
     }
 
-    buildCellView(offset){
+    buildCellView(){
         let startArrayObj = {
-            0:7,
-            1:14,
-            2:21,
-            3:28,
-            4:31
+            1:7,
+            2:14,
+            3:21,
+            4:28,
+            5:31
         };
         let style = {
             backgroundColor:'#000',
             color:'#fff'
         };
-        let dayNum = offset === 0 ? 7 : 7-this.props.starts;
         let rowViewArray = [];
         let offsetStart = startArrayObj[this.state.initial];
         let offsetEnd = offsetStart <= 28 ? offsetStart-7 : offsetStart-3;
+        offsetStart += this.state.initial === 5 ? 1 : 0;
         for(let r = offsetEnd;r<offsetStart;r++){
             rowViewArray.push(<td key={r} style={r === this.state.today ? style : null}>{r !== 0 ? r : ''}</td>);
         }
@@ -38,7 +38,7 @@ class CalendarRow extends Component{
     render(){
         return(
             <tr>
-                {this.props.starts !== 0 ? this.buildCellView(this.props.starts) : this.buildCellView(0)}
+                {this.props.starts !== 0 ? this.buildCellView() : this.buildCellView(0)}
             </tr>
         )
     }
