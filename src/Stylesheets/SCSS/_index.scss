@@ -3,3 +3,19 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+.calendar-view {
+  width: 600px;
+}
+
+.monthLayout {
+  width: 100%;
+}
+
+.monthLayout > div {
+  display: inline-block;
+  padding: 15px;
+}
+
+.monthLayout > div:not(.active) {
+  display:none;
+}

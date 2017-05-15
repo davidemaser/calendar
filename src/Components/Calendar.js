@@ -2,8 +2,10 @@
  * Created by David Maser on 15/05/2017.
  */
 import React,{Component} from 'react';
-import '../Config/Calendar';
+import CalObj from '../Config/Calendar.json';
 import CalendarTable from "./CalendarTable";
+import CalendarHeader from "./CalendarHeader";
+import CalendarMonthView from "./CalendarMonthView";
 
 class Calendar extends Component{
     constructor(props){
@@ -13,7 +15,8 @@ class Calendar extends Component{
             month:date.getMonth()+1,
             dayOfWeek:date.getDay(),
             date:date.getDate(),
-            year:date.getFullYear()
+            year:date.getFullYear(),
+            lang:this.props.lang
         }
     }
 
@@ -29,11 +32,23 @@ class Calendar extends Component{
         return Math.floor((d.getDate() - 1) / 7) + 1;
     }
 
+    getDayLabels(){
+        return CalObj.days[this.state.lang];
+    }
+
+    getMonthLabels(){
+        return CalObj.months[this.state.lang];
+    }
+
     render(){
         return(
+            <div className="calendar-view">
+                <CalendarMonthView months={this.getMonthLabels()} currentMonth={this.state.month}/>
             <table>
+            <CalendarHeader days={this.getDayLabels()}  />
             <CalendarTable today={this.state.date} rows={this.weeksInMonth(this.state.month,this.state.year)} starts={this.defineStart()}/>
             </table>
+            </div>
         )
     }
 }
