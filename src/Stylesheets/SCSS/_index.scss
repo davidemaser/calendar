@@ -9,6 +9,19 @@ body {
 
 .monthLayout {
   width: 100%;
+  position: relative;
+  &:before {
+    content: "<";
+    position: absolute;
+    left: 0;
+    padding: 15px;
+  }
+  &:after {
+    content: ">";
+    position: absolute;
+    right: 0;
+    padding: 15px;
+  }
 }
 
 .monthLayout > div {

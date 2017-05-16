@@ -37,10 +37,12 @@
                     "short":"jan",
                     "label":"January",
                 "days":31,
-                "events":{
-                    "name":"New Years",
-                    "day":"1"
+              "events":{
+                "1":{
+                  "en":"New Year's Day",
+                  "fr":"Nouvel An"
                 }
+              }
             },
             "2":{
                     "short":"feb",
@@ -60,7 +62,16 @@
             "5":{
                     "short":"may",
                     "label":"May",
-                "days":31
+                "days":31,
+              "events":{
+                "17":{
+                  "en":"Dave's birthday",
+                  "fr":"Anniversaire de Dave"
+                },"28":{
+                  "en":"Smallah Day",
+                  "fr":"Anniversaire de Dave"
+                }
+              }
             },
             "6":{
                     "short":"jun",
@@ -96,15 +107,12 @@
                     "short":"dec",
                     "label":"December",
                 "days":30,
-                "events":{
-                    "en":{
-                        "name":"Christmas"
-                    },
-                    "fr":{
-                        "name":"Noel"
-                    },
-                    "day":25
+              "events":{
+                "25":{
+                  "en":"Christmas",
+                  "fr":"Noel"
                 }
+              }
             }
         }
 

@@ -10,7 +10,10 @@ class CalendarTable extends Component{
         this.state={
             rows:this.props.rows,
             starts:this.props.starts,
-            today:this.props.today
+            today:this.props.today,
+            data:this.props.data,
+            lang:this.props.lang,
+            month:this.props.month
         };
     }
 
@@ -18,7 +21,7 @@ class CalendarTable extends Component{
         let rowViewArray = [];
         for(let r = 1;r<this.state.rows+1;r++){
             rowViewArray.push(
-                <CalendarRow key={r} today={this.state.today} initial={r} starts={r !== 0 ? this.props.starts : 0}/>
+                <CalendarRow key={r} today={this.state.today} initial={r} starts={r !== 0 ? this.props.starts : 0} data={this.state.data} lang={this.state.lang} month={this.state.month}/>
             );
         }
 

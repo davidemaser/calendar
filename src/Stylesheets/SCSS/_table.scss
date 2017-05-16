@@ -1,8 +1,11 @@
 td {
   padding: 10px;
   transition: all 0.2s;
+  &[data-event-flag="true"] {
+    background: #80dc82;
+  }
 }
-td:hover{
+tbody td:hover{
   background:#e6e6e6;
   cursor:pointer;
 }

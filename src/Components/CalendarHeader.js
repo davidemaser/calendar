@@ -13,23 +13,6 @@ class CalendarHeader extends Component{
         }
     }
 
-    buildMonthView(){
-        let obj = this.state.monthList;
-        let o;
-        let objArray = [];
-        for(o in obj){
-            console.log(parseInt(o),obj[o],parseInt(this.state.month));
-            objArray.push(
-                <div key={o} className={parseInt(o) === parseInt(this.state.month) ? 'active':''}>{obj[o].label}</div>
-            );
-        }
-        return(
-            <div className="monthLayout">
-                {objArray}
-            </div>
-        )
-    }
-
     buildDayView(){
         let obj = this.state.calObj;
         let o;

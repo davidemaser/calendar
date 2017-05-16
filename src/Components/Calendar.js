@@ -46,7 +46,7 @@ class Calendar extends Component{
                 <CalendarMonthView months={this.getMonthLabels()} currentMonth={this.state.month}/>
             <table>
             <CalendarHeader days={this.getDayLabels()}  />
-            <CalendarTable today={this.state.date} rows={this.weeksInMonth(this.state.month,this.state.year)} starts={this.defineStart()}/>
+            <CalendarTable today={this.state.date} rows={this.weeksInMonth(this.state.month,this.state.year)} starts={this.defineStart()} data={CalObj} lang={this.state.lang} month={this.state.month}/>
             </table>
             </div>
         )

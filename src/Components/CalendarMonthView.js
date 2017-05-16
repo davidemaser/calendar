@@ -8,7 +8,8 @@ class CalendarMonthView extends Component{
         super(props);
         this.state={
             monthList:this.props.months,
-            month:this.props.currentMonth
+            month:this.props.currentMonth,
+            year:new Date().getFullYear()
         }
     }
 
@@ -17,9 +18,8 @@ class CalendarMonthView extends Component{
         let o;
         let objArray = [];
         for(o in obj){
-            console.log(parseInt(o),obj[o],parseInt(this.state.month));
             objArray.push(
-                <div key={o} className={parseInt(o) === parseInt(this.state.month) ? 'active':''}>{obj[o].label}</div>
+                <div key={o} className={parseInt(o,10) === parseInt(this.state.month,10) ? 'active':''}>{obj[o].label} {this.state.year}</div>
             );
         }
         return objArray;
