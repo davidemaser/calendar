@@ -35,7 +35,8 @@ class CalendarRow extends Component{
         let eventObj = this.state.data.months[this.state.lang][this.state.month].events;
         offsetStart += this.state.initial === 5 ? 1 : 0;
         for(let r = offsetEnd;r<offsetStart;r++){
-            rowViewArray.push(<td key={r} data-event-flag={eventObj[r] !== undefined ? true : null} data-event-title={eventObj[r] !== undefined ? eventObj[r][this.state.lang] : null} style={r === this.state.today ? style : null}>{r !== 0 ? r : ''}</td>);
+            console.log(eventObj[r]);
+            rowViewArray.push(<td key={r} data-event-flag={eventObj[r] !== undefined ? eventObj[r].type : null} data-event-title={eventObj[r] !== undefined ? eventObj[r][this.state.lang] : null} style={r === this.state.today ? style : null}>{r !== 0 ? r : ''}</td>);
         }
         return rowViewArray
     }
